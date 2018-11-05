@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".CameraWebviewActivity">
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt"
+    android:text="Ca"
+    android:layout_alignParentTop="true"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/path"
+        android:text="path"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bt"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:text="ok"
+        android:layout_alignParentTop="true"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rr"
+        android:text="rr"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/path"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ww"
+        android:text="ww"
+        android:layout_toRightOf="@+id/rr"
+        android:layout_alignParentTop="true"
+
+        />
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bt"
+        ></WebView>
+</RelativeLayout >
