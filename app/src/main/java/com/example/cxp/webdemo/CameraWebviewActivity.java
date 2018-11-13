@@ -240,7 +240,8 @@ public void showPath(){
             Log.v("allPath",allPath);
             UploadMethod upload = new UploadMethod();
             //upload.upLoading(图片文件路径, ftp上保存的目录路径,  上传后的文件名);
-            upload.upLoading(allPath, "./tes", allName);
+            boolean test=upload.upLoading(allPath, "/disk/nginx/html/RiverChiefSystem/event/ftp", allName);
+            Log.v("upload",test+"");
         }
 }
 public  void okUpload(){

@@ -15,10 +15,10 @@ import java.util.concurrent.TimeoutException;
 public class UploadMethod {
     //private final int UP_PORT = 56;
     private final int UP_PORT = 21;
-    private final int DOWN_PORT = 65;
+    //private final int DOWN_PORT = 65;
     private final String USERNAME = "test";
-    private final String PASSWORD = "1223";
-    private final String ADRESS = "192.168.2.74";
+    private final String PASSWORD = "abc123";
+    private final String ADRESS = "36.250.234.65";
     private FutureTask<Boolean> uploadTask;
     public UploadMethod(){}
     private boolean uploadFile(String hostname, int port, String username,String password, String folder, String filename, InputStream input) {
@@ -39,7 +39,8 @@ public class UploadMethod {
             ftp.changeWorkingDirectory(folder);
 
             //设置成其他端口的时候要添加这句话
-            ftp.enterLocalPassiveMode();
+            //ftp.enterLocalPassiveMode();
+            ftp.enterLocalActiveMode();
             ftp.storeFile(filename, input);
             input.close();
             ftp.logout();
